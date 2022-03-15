@@ -12,9 +12,9 @@ async function Create(req, res, next) {
 
     if (!newUser) return res.status(404).json({ err: "user not created" });
 
-    req.headers.authorization = `Basic ${`${email}:${password}`.toString(
-      "base64",
-    )}`;
+    const basicToken = Buffer.from(`${email}:${password}`).toString("base64");
+
+    req.headers.authorization = `Basic ${basicToken}`;
 
     return next();
   } catch (error) {

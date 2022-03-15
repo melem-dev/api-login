@@ -3,7 +3,7 @@ const secret_key = process.env.SECRET_KEY || "Secret_key";
 
 function encode(payload) {
   try {
-    const token = jwt.sign(payload, secret_key, { expiresIn: 24 });
+    const token = jwt.sign(payload, secret_key, { expiresIn: "24h" });
 
     return { status: true, data: token };
   } catch (error) {
@@ -25,17 +25,19 @@ function decode(token) {
 
 function verify(token = false) {
   try {
-    if (!token) throw Error("token invalid");
+    if (!token) throw Error("token invalid 1");
 
     const checkSize = token.split(".");
 
-    if (checkSize.length !== 3) throw Error("token invalid");
+    if (checkSize.length !== 3) throw Error("token invalid 2");
 
-    const data = jwt.verify(token, secret_key, (err, data) =>
-      err ? false : data,
-    );
+    const data = jwt.verify(token, secret_key, (err, data) => {
+      if (err) throw Error(err);
 
-    if (!data) throw Error("token invalid");
+      return data;
+    });
+
+    if (!data) throw Error("token invalid 3");
 
     return { status: true, data };
   } catch (error) {
