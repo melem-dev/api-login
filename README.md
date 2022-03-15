@@ -17,8 +17,22 @@ Descrição: Uma API de autenticação utilizando banco de dados e jsonwebtoken
 - [x] Middlewares
   - [x] Auth
 - [x] Roteamento
-  - [ ] GET /registry
+  - [x] GET /registry
   - [x] GET /login
-  - [ ] GET /validate
-  - [ ] GET /recovery
-  - [ ] PUT /recovery
+  - [x] GET /validate
+  - [x] GET /recovery
+  - [x] PUT /recovery
+- [ ] Modelos
+  - [ ] User
+    - Username
+    - Password
+    - Email
+    - Token
+- [ ] Controladores
+  - [ ] Auth
+    - [ ] Login
+    - [ ] Validate
+    - [ ] GetRecovery
+    - [ ] SetRecovery
+  - [ ] User
+    - [ ] Create
