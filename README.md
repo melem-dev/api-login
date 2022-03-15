@@ -37,4 +37,4 @@ Descrição: Uma API de autenticação utilizando banco de dados e jsonwebtoken
     - [x] SetRecovery
   - [x] User
     - [x] Create
-- [ ] Bcrypt
+- [x] Bcrypt
