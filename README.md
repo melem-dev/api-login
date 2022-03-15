@@ -14,8 +14,8 @@ Descrição: Uma API de autenticação utilizando banco de dados e jsonwebtoken
 - [ ] Conexão com o Mongodb cloud
 - [x] Utils
   - [x] JsonWebToken
-- [ ] Middlewares
-  - [ ] Auth
+- [x] Middlewares
+  - [x] Auth
 - [ ] Roteamento
   - [ ] GET /registry
   - [ ] GET /login
