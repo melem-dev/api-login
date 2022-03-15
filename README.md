@@ -22,8 +22,8 @@ Descrição: Uma API de autenticação utilizando banco de dados e jsonwebtoken
   - [x] GET /validate
   - [x] GET /recovery
   - [x] PUT /recovery
-- [ ] Modelos
-  - [ ] User
+- [x] Modelos
+  - [x] User
     - Username
     - Password
     - Email
