@@ -1,7 +1,12 @@
 const express = require("express");
 const cors = require("cors");
-const routes = require("./routes");
 
+if (!process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
+const routes = require("./routes");
+const mongodb = require("./configs/mongoose");
 const { log } = require("./utils");
 
 const app = express();

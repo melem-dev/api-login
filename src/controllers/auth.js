@@ -8,7 +8,7 @@ async function Login(req, res) {
 
     if (!token) return res.status(400).json({ err: "token not found" });
 
-    const [username, password] = Buffer.from(token.split(" ")[0], "base64")
+    const [username, password] = Buffer.from(token.split(" ")[1], "base64")
       .toString("ascii")
       .split(":");
 
@@ -29,7 +29,7 @@ async function Login(req, res) {
 
     const authToken = jwt.encode(payload);
 
-    return res.status(200).json({ auth: authToken });
+    return res.status(200).json({ auth: authToken.data });
   } catch (error) {
     return res.status(500).json({ err: error.message });
   }

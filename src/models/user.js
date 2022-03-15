@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 
 const schema = new mongoose.Schema(
   {
@@ -10,7 +11,7 @@ const schema = new mongoose.Schema(
   { timestamps: true },
 );
 
-schema.pre("save", (next) => {
+schema.pre("save", function (next) {
   if (!this.isModified("password")) {
     return next();
   }
@@ -19,7 +20,7 @@ schema.pre("save", (next) => {
   next();
 });
 
-schema.pre("findByIdAndUpdate", (next) => {
+schema.pre("findByIdAndUpdate", function (next) {
   if (!this.isModified("password")) {
     return next();
   }
