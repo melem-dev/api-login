@@ -5,6 +5,7 @@ const Public = require("./public");
 app.use(Public);
 
 const Private = require("./private");
-app.use("/admin", Private);
+const WAuth = require("../middlewares/auth");
+app.use("/admin", WAuth, Private);
 
 module.exports = app;

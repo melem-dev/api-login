@@ -10,6 +10,7 @@ Descrição: Uma API de autenticação utilizando banco de dados e jsonwebtoken
   - [x] Mongoose
   - [x] Dotenv
   - [x] jsonwebtoken
+  - [x] Bcrypt
 - [x] Inicializar servidor express
 - [ ] Conexão com o Mongodb cloud
 - [x] Utils
@@ -28,11 +29,12 @@ Descrição: Uma API de autenticação utilizando banco de dados e jsonwebtoken
     - Password
     - Email
     - Token
-- [ ] Controladores
-  - [ ] Auth
-    - [ ] Login
-    - [ ] Validate
-    - [ ] GetRecovery
-    - [ ] SetRecovery
-  - [ ] User
-    - [ ] Create
+- [x] Controladores
+  - [x] Auth
+    - [x] Login
+    - [x] Validate
+    - [x] GetRecovery
+    - [x] SetRecovery
+  - [x] User
+    - [x] Create
+- [ ] Bcrypt
