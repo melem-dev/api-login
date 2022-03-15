@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const secret_key = proces.env.SECRET_KEY || "Secret_key";
+const secret_key = process.env.SECRET_KEY || "Secret_key";
 
 function encode(payload) {
   try {
